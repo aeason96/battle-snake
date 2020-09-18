@@ -1,6 +1,6 @@
 import { Game } from "./Game";
 
-type GameRequest = {
+export type GameRequest = {
   game: Game;
   turn: number;
   board: object;

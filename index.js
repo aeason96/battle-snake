@@ -1,5 +1,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
+const handleMove = require("./handlers/HandleMove/HandleMove");
+const handleStart = require("./handlers/HandleStart/HandleStart");
 
 const PORT = process.env.PORT || 3000;
 
@@ -24,26 +26,6 @@ function handleIndex(request, response) {
     tail: "default",
   };
   response.status(200).json(battlesnakeInfo);
-}
-
-function handleStart(request, response) {
-  var gameData = request.body;
-  console.log("START----------------------------");
-  console.log(request.body);
-  response.status(200).send("ok");
-}
-
-function handleMove(request, response) {
-  var gameData = request.body;
-
-  var possibleMoves = ["up", "down", "left", "right"];
-  var move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
-
-  console.log("MOVE: " + move);
-  console.log(request.body);
-  response.status(200).send({
-    move: move,
-  });
 }
 
 function handleEnd(request, response) {
