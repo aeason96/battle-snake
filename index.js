@@ -1,7 +1,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
-const handleMove = require("./handlers/HandleMove/HandleMove");
-const handleStart = require("./handlers/HandleStart/HandleStart");
+import handleMove from "./handlers/HandleMove/HandleMove";
+import handleStart from "./handlers/HandleStart/HandleStart";
 
 const PORT = process.env.PORT || 3000;
 
