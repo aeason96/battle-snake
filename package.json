@@ -2,7 +2,7 @@
   "name": "starter-snake-node",
   "version": "1.0.0",
   "description": "A simple Battlesnake written in JavaScript for Node.js",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "node index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
